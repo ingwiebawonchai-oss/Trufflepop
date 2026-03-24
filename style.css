@@ -1,0 +1,226 @@
+body {
+    background: linear-gradient(180deg, #eef2ff, #dbeafe);
+    font-family: 'Philosopher', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.container {
+    text-align: center;
+}
+
+
+#leaderboard {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 220px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+#leaderboardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#leaderboardBody {
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+#leaderboard td {
+    padding: 6px;
+}
+
+#closeBoard {
+    background: #ff6b6b;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 4px 10px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#closeBoard:hover {
+    background: #ff4d4d;
+}
+
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+#name {
+    padding: 12px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+    width: 250px;
+    max-width: 70vw;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #4c7dff, #6ea8ff);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    transform: translateY(-2px) scale(1.05);
+}
+
+
+#count {
+    font-size: 70px;
+    margin: 10px;
+    font-weight: bold;
+    color: #222;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#click {
+    width: 300px;
+    max-width: 70vw;
+    cursor: pointer;
+    transition: 0.15s;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+#click:hover {
+    transform: scale(1.08);
+}
+
+#click:active {
+    transform: scale(0.92);
+}
+
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+@media (max-width:700px) {
+
+    #leaderboard {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 15px;
+        width: 90%;
+    }
+
+    #count {
+        font-size: 50px;
+    }
+
+}
+
+body,
+input,
+button {
+    user-select: none;
+}
+
+
+
+.plusOne {
+    position: fixed;
+    color: #ff7675;
+    font-weight: bold;
+    font-size: 24px;
+    pointer-events: none;
+    animation: floatUp 0.8s ease-out forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+.floatText {
+    position: fixed;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff7675;
+    pointer-events: none;
+    animation: floatUp 0.8s forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+.me {
+    background: #ffeaa7;
+    font-weight: bold;
+}
+
+#click {
+    -webkit-user-drag: none;
+    user-select: none;
+    cursor: pointer;
+}

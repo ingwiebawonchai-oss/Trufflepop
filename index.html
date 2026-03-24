@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truffle</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="leaderboard">
+        <div id="leaderboardHeader">
+            <span>Leaderboard</span>
+            <button id="closeBoard">X</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboardBody"></tbody>
+        </table>
+    </div>
+    <div class="container">
+        <div class="input-group">
+            <input type="text" id="name" placeholder="Name Your Truffle !">
+            <button onclick="startGame()">Rank</button>
+        </div>
+        <h1 id="count">0</h1>
+        <img src="truffle_nobg.png" id="click" draggable="false">
+        <div id="shop">
+
+            <button onclick="buyClickUpgrade()">
+                Upgrade Click (+1) — 100
+            </button>
+
+            <button onclick="buyAutoClick()">
+                Auto Clicker — 500
+            </button>
+            
+        </div>
+    </div>
+</body>
+
+</html>
